@@ -1,0 +1,38 @@
+html,
+body {
+  background: #f1f1f1;
+  min-height: 100%;
+  overflow: hidden;
+}
+#main-container {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#main-container > .row {
+  min-height: 100%;
+  /*> [class*="col-"] {
+            position: relative;
+        }*/
+
+}
+#recipe-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#containers-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  overflow: auto;
+}

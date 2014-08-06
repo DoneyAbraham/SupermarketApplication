@@ -1,0 +1,102 @@
+﻿@primaryColor: #353e4d;
+#containers {
+    background: @primaryColor;
+    min-height: 100%;
+    color: white;
+
+    .btn-link {
+        color: white !important;
+    }
+
+    > header {
+        padding: 0 20px;
+
+        .containers-tabs {
+            list-style: none;
+            border-bottom: 1px solid rgba(255, 255, 255, .2);
+            margin-right: -20px;
+            margin-left: -20px;
+            padding: 0;
+
+            li {
+                padding: 0;
+            }
+
+            a {
+                display: block;
+                color: white;
+                padding: 19px 0;
+                text-align: center;
+                font-weight: bold;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            .active a {
+                background: rgba(255, 255, 255, .1);
+            }
+        }
+    }
+}
+
+#containers-list, #history-list {
+    .containers-search-input {
+        background: none;
+        border: none;
+        color: white;
+        width: 100%;
+        padding: 4px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    section {
+        header {
+            background: lighten(@primaryColor, 5%);
+            border: 1px solid darken(@primaryColor, 10%);
+            border-left: none; border-right: none;
+            margin-bottom: 10px;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+
+            h4 {
+                @height: 25px;
+                padding: 0 3px 0 20px;
+                height: @height;
+                line-height: @height;
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+
+        ul {
+            list-style: none;
+            margin: 0 20px;
+            padding: 0;
+
+            li {
+                padding: 6px 0;
+                border-bottom: 1px solid lighten(@primaryColor, 2%);
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+
+                &.highlight {
+                    font-weight: bold;
+                }
+
+                &.filter-hidden {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+#new-container-name {
+    color: #353e4d;
+}

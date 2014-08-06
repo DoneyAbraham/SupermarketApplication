@@ -1,0 +1,19 @@
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.4);
+  background-image: url(gfx/loader.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.loader.show {
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+}

@@ -1,0 +1,49 @@
+﻿@{
+    this.Layout = "~/Views/Shared/_Layout.cshtml";
+    this.ViewBag.Title = "Index";
+    ViewBag.Title = "Supermarket";
+    ViewBag.BodyClass = "main-page";
+}
+<div class="row">
+    <div id="recipe-wrapper" class="col-lg-10 col-md-8 col-sm-8 col-xs-12">
+        <header id="recipe-search-container" class="search-header">
+            <input type="search" class="recipe-search-input" placeholder="Search recipies" />
+            <button class="shopping-cart"><i class="glyphicon glyphicon-shopping-cart"></i></button>
+            <button class="gravatar-picture">
+                <img src="@( "http://gravatar.com/avatar/" + this.ViewBag.EmailHash + "?s=40")" width="40" height="40" />
+            </button>
+        </header>
+
+        <div id="recipe-results">
+            <!-- Some magic here -->
+        </div>
+    </div>
+
+    <div id="containers-wrapper" class="col-lg-2 col-md-4 col-sm-4 col-xs-10">
+        <aside id="containers">
+            <header class="container-fluid">
+                <ul class="row containers-tabs">
+                    <li class="col-lg-6 active"><a href="#containers-list" data-toggle="tab">Kitchen stock</a></li>
+                    <li class="col-lg-6"><a href="#history-list" data-toggle="tab">History</a></li>
+                </ul>
+            </header>
+            <div class="tab-content">
+                <div id="containers-list" class="tab-pane fade in active">
+                    <div id="containers-search" class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-10">
+                                <input type="search" class="containers-search-input" placeholder="Search" />
+                            </div>
+                            <div class="col-lg-2">
+                                <button type="button" class="btn btn-link btn-add-container"><i class="glyphicon glyphicon-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="history-list" class="tab-pane fade"></div>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<div class="loader"></div>

@@ -1,0 +1,10 @@
+﻿<li data-toggle="tooltip">
+    <% if(MissingIngredients.length) { %>
+    <button class="btn btn-link btn-xs btn-missing-ingredients" title="Missing ingredients" data-content="<%= MissingIngredients.join("<br />") %>"><i class="glyphicon glyphicon-warning-sign"></i></button> 
+    <% } %>
+    <%= Name %> (Kr. <%= TotalPrice %>)
+    <div class="btn-group-supermarket">
+        <button class="btn btn-xs btn-link btn-show-map" data-toggle="modal" data-address="<%= Address %>"><i class="glyphicon glyphicon-map-marker"></i></button>
+        <button class="btn btn-xs btn-link btn-add-to-cart" data-supermarket-id="<%= Id %>"><i class="glyphicon glyphicon-shopping-cart" data-alternate="glyphicon glyphicon-remove"></i></button>
+    </div>
+</li>

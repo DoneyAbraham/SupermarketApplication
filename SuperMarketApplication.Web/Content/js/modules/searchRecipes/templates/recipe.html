@@ -1,0 +1,42 @@
+﻿<div class="row">
+    <div class="col-lg-6">
+        <div class="recipe-image">
+            <img src="<%= imageUrl %>" />
+        </div>
+        <h2>
+            <%= recipeName %>
+        </h2>
+
+        <p>Source: <%= sourceDisplayName %></p>
+    </div>
+    <div class="col-lg-3">
+        <h3>Ingredients</h3>
+        <ul class="ingredients-list">
+            <% _.each(ingredients, function(ingredient) { %>
+            <li><%= ingredient %></li>
+            <% }) %>
+        </ul>
+    </div>
+
+    <div class="col-lg-3 hide">
+        <div class="rating-container">
+            <ul>
+                <li><i class="glyphicon glyphicon-star-empty"></i></li>
+                <li><i class="glyphicon glyphicon-star-empty"></i></li>
+                <li><i class="glyphicon glyphicon-star-empty"></i></li>
+                <li><i class="glyphicon glyphicon-star-empty"></i></li>
+                <li><i class="glyphicon glyphicon-star-empty"></i></li>
+            </ul>
+            <ul class="rating-actual rated-<%= rating %>">
+                <li><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i></li>
+                <li><i class="glyphicon glyphicon-star"></i></li>
+            </ul>
+        </div>
+
+        <h3>Supermarkets</h3>
+        <ul class="super-markets-list"></ul>
+    </div>
+</div>

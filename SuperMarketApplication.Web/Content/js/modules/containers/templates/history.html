@@ -1,0 +1,13 @@
+﻿<section>
+    <header>
+        <h4>
+            <%= App.moment(Created).calendar() %>
+            <span class="pull-right">Kr. <%= TotalPrice %></span>
+        </h4>
+    </header>
+    <ul>
+        <% _.each(Recipes, function(recipe) { %>
+        <li><%= recipe.Name %></li>
+        <% }) %>
+    </ul>
+</section>

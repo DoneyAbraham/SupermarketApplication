@@ -1,0 +1,13 @@
+﻿<header>
+    <h4>
+        <%= Name %>
+        <button type="button" class="btn btn-link btn-xs btn-delete pull-right"><i class="glyphicon glyphicon-trash"></i></button>
+    </h4>
+</header>
+<ul>
+    <% _.each(Ingredients, function(ingredient) { %>
+    <li>
+        <%= ingredient.Name %>
+    </li>
+    <% }) %>
+</ul>

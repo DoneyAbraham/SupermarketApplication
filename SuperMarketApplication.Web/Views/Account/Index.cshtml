@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Log in";
+    ViewBag.BodyClass = "login-page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div id="login-jumbotron" class="jumbotron col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+        <h1>Log in</h1>
+        @{ Html.BeginForm("LogIn", "Account"); }
+        <div class="form-group hide">
+            <label for="firstName">First name</label>
+
+            <div class="input-group">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+                <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First name">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email address</label>
+            
+            <div class="input-group">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            
+            <div class="input-group">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+            </div>
+        </div>
+
+        <div class="form-group hide">
+            <label for="comfirmPassword">Confirm password</label>
+
+            <div class="input-group">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+                <input type="password" class="form-control" name="comfirmPassword" id="comfirmPassword" placeholder="Confirm password">
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-login" data-loading="Logging in..."><i class="glyphicon glyphicon-ok-circle"></i> Log in</button>
+        <button type="button" class="btn btn-register"><i class="glyphicon glyphicon-plus"></i> Register</button>
+
+        <button type="submit" class="btn btn-primary hide"><i class="glyphicon glyphicon-plus"></i> Register</button>
+
+        @{ Html.EndForm(); }
+    </div>
+</div>

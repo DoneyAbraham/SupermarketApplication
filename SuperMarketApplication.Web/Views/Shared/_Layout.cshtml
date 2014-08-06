@@ -1,0 +1,30 @@
+﻿@using System.Web.Optimization;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@this.ViewBag.Title</title>
+
+    @Styles.Render("~/Content/css")
+
+    <script>
+        var userId = "@this.ViewBag.UserId";
+        var userName = "@this.ViewBag.UserName";
+    </script>
+</head>
+<body class="@this.ViewBag.BodyClass">
+
+    <div id="main-container" class="container-fluid">
+        @RenderBody()
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYLvqN8SXCF860i4Dd6ULOIqNaqa6CcKk"></script>
+    @Scripts.Render("~/bundles/js")
+</body>
+</html>

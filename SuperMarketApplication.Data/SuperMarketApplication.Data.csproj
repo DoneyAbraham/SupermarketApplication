@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{949DD684-8CBD-4FCB-B95C-37EA25D051A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SuperMarketApplication.Data</RootNamespace>
+    <AssemblyName>SuperMarketApplication.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\DomainDataContext.cs" />
+    <Compile Include="Helpers\EncryptionHelper.cs" />
+    <Compile Include="Migrations\201407171922511_AddUsers.cs" />
+    <Compile Include="Migrations\201407171922511_AddUsers.Designer.cs">
+      <DependentUpon>201407171922511_AddUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201407221640280_AddShoppingHistoryAndSuperMarket.cs" />
+    <Compile Include="Migrations\201407221640280_AddShoppingHistoryAndSuperMarket.Designer.cs">
+      <DependentUpon>201407221640280_AddShoppingHistoryAndSuperMarket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201407221731559_AddMaxLengthToPassword.cs" />
+    <Compile Include="Migrations\201407221731559_AddMaxLengthToPassword.Designer.cs">
+      <DependentUpon>201407221731559_AddMaxLengthToPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201407241543505_AddContainers.cs" />
+    <Compile Include="Migrations\201407241543505_AddContainers.Designer.cs">
+      <DependentUpon>201407241543505_AddContainers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201407241643283_RenameShoppingItemToIngredient.cs" />
+    <Compile Include="Migrations\201407241643283_RenameShoppingItemToIngredient.Designer.cs">
+      <DependentUpon>201407241643283_RenameShoppingItemToIngredient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408041700375_AddAddressToSuperMarket.cs" />
+    <Compile Include="Migrations\201408041700375_AddAddressToSuperMarket.Designer.cs">
+      <DependentUpon>201408041700375_AddAddressToSuperMarket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408041712227_AddPriceToSuperMarketIngredients.cs" />
+    <Compile Include="Migrations\201408041712227_AddPriceToSuperMarketIngredients.Designer.cs">
+      <DependentUpon>201408041712227_AddPriceToSuperMarketIngredients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408051818473_FixShoppingHistory.cs" />
+    <Compile Include="Migrations\201408051818473_FixShoppingHistory.Designer.cs">
+      <DependentUpon>201408051818473_FixShoppingHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408051846546_RemoveIngredientsFromShoppingHistory.cs" />
+    <Compile Include="Migrations\201408051846546_RemoveIngredientsFromShoppingHistory.Designer.cs">
+      <DependentUpon>201408051846546_RemoveIngredientsFromShoppingHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408061556564_IncreaseTheUsePasswordLength.cs" />
+    <Compile Include="Migrations\201408061556564_IncreaseTheUsePasswordLength.Designer.cs">
+      <DependentUpon>201408061556564_IncreaseTheUsePasswordLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408061740337_AddIngredientsToShoppingHistory.cs" />
+    <Compile Include="Migrations\201408061740337_AddIngredientsToShoppingHistory.Designer.cs">
+      <DependentUpon>201408061740337_AddIngredientsToShoppingHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408061825037_AddIngredientIdToShoppingHistoryIngredientId.cs" />
+    <Compile Include="Migrations\201408061825037_AddIngredientIdToShoppingHistoryIngredientId.Designer.cs">
+      <DependentUpon>201408061825037_AddIngredientIdToShoppingHistoryIngredientId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\Container.cs" />
+    <Compile Include="Models\RecipeHistory.cs" />
+    <Compile Include="Models\ShoppingHistory.cs" />
+    <Compile Include="Models\Ingredient.cs" />
+    <Compile Include="Models\ShoppingHistoryIngredientId.cs" />
+    <Compile Include="Models\SuperMarket.cs" />
+    <Compile Include="Models\SuperMarketIngredient.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201407171922511_AddUsers.resx">
+      <DependentUpon>201407171922511_AddUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201407221640280_AddShoppingHistoryAndSuperMarket.resx">
+      <DependentUpon>201407221640280_AddShoppingHistoryAndSuperMarket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201407221731559_AddMaxLengthToPassword.resx">
+      <DependentUpon>201407221731559_AddMaxLengthToPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201407241543505_AddContainers.resx">
+      <DependentUpon>201407241543505_AddContainers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201407241643283_RenameShoppingItemToIngredient.resx">
+      <DependentUpon>201407241643283_RenameShoppingItemToIngredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408041700375_AddAddressToSuperMarket.resx">
+      <DependentUpon>201408041700375_AddAddressToSuperMarket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408041712227_AddPriceToSuperMarketIngredients.resx">
+      <DependentUpon>201408041712227_AddPriceToSuperMarketIngredients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408051818473_FixShoppingHistory.resx">
+      <DependentUpon>201408051818473_FixShoppingHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408051846546_RemoveIngredientsFromShoppingHistory.resx">
+      <DependentUpon>201408051846546_RemoveIngredientsFromShoppingHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408061556564_IncreaseTheUsePasswordLength.resx">
+      <DependentUpon>201408061556564_IncreaseTheUsePasswordLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408061740337_AddIngredientsToShoppingHistory.resx">
+      <DependentUpon>201408061740337_AddIngredientsToShoppingHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408061825037_AddIngredientIdToShoppingHistoryIngredientId.resx">
+      <DependentUpon>201408061825037_AddIngredientIdToShoppingHistoryIngredientId.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,89 @@
+#containers {
+  background: #353e4d;
+  min-height: 100%;
+  color: white;
+}
+#containers .btn-link {
+  color: white !important;
+}
+#containers > header {
+  padding: 0 20px;
+}
+#containers > header .containers-tabs {
+  list-style: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-right: -20px;
+  margin-left: -20px;
+  padding: 0;
+}
+#containers > header .containers-tabs li {
+  padding: 0;
+}
+#containers > header .containers-tabs a {
+  display: block;
+  color: white;
+  padding: 19px 0;
+  text-align: center;
+  font-weight: bold;
+}
+#containers > header .containers-tabs a:hover {
+  text-decoration: none;
+}
+#containers > header .containers-tabs .active a {
+  background: rgba(255, 255, 255, 0.1);
+}
+#containers-list .containers-search-input,
+#history-list .containers-search-input {
+  background: none;
+  border: none;
+  color: white;
+  width: 100%;
+  padding: 4px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#containers-list section header,
+#history-list section header {
+  background: #3f4a5c;
+  border: 1px solid #20262f;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 10px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+#containers-list section header h4,
+#history-list section header h4 {
+  padding: 0 20px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+#containers-list section ul,
+#history-list section ul {
+  list-style: none;
+  margin: 0 20px;
+  padding: 0;
+}
+#containers-list section ul li,
+#history-list section ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid #394353;
+}
+#containers-list section ul li:last-child,
+#history-list section ul li:last-child {
+  border-bottom: 0;
+}
+#containers-list section ul li.highlight,
+#history-list section ul li.highlight {
+  font-weight: bold;
+}
+#containers-list section ul li.filter-hidden,
+#history-list section ul li.filter-hidden {
+  display: none;
+}
+#new-container-name {
+  color: #353e4d;
+}
